@@ -5,9 +5,7 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-console.log("SERVER.JS VERSION: DELETE ROUTE SHOULD EXIST ✅");
-
-
+console.log("SERVER.JS VERSION: ROOT AUTO REDIRECT ENABLED ✅");
 
 const DATA_PATH = path.join(__dirname, "data", "students.json");
 
