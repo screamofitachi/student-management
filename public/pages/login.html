@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container d-flex align-items-center justify-content-center" style="min-height:100vh;">
+    <div class="card shadow-sm" style="max-width: 420px; width:100%;">
+      <div class="card-body p-4">
+        <h3 class="mb-2">Admin Login</h3>
+        <p class="text-muted mb-4">Öğrenci Yönetim Sistemi</p>
+
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label">Kullanıcı Adı</label>
+            <input id="username" class="form-control" placeholder="admin" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Şifre</label>
+            <input id="password" type="password" class="form-control" placeholder="1234" required />
+          </div>
+
+          <button class="btn btn-primary w-100" type="submit">Giriş Yap</button>
+          <div id="msg" class="mt-3"></div>
+        </form>
+
+        <div class="mt-3 small text-muted">
+          Demo: <b>admin</b> / <b>1234</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>

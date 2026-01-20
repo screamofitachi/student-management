@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/pages/index.html">Öğrenci Yönetim</a>
+      <div class="ms-auto d-flex gap-2">
+        <a class="btn btn-outline-light btn-sm" href="/pages/students.html">Öğrenciler</a>
+        <a class="btn btn-outline-light btn-sm" href="/pages/about.html">Hakkında</a>
+        <button id="logoutBtn" class="btn btn-danger btn-sm">Çıkış</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <h2 class="mb-3">Dashboard</h2>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="text-muted">Toplam Öğrenci</div>
+            <div id="totalStudents" class="display-6">-</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="mb-2">Kısayollar</h5>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-primary" href="/pages/students.html">Öğrenci Listesi</a>
+              <a class="btn btn-success" href="/pages/add-student.html">Öğrenci Ekle</a>
+            </div>
+            <p class="text-muted mt-3 mb-0">
+              Bu sayfa giriş kontrolü yapar. Giriş yoksa otomatik login’e atar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

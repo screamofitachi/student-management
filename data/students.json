@@ -1,0 +1,23 @@
+[
+  {
+    "id": 2,
+    "fullName": "Furkan Işık",
+    "studentNo": "23040301063",
+    "department": "Yazılım Mühendisliği",
+    "grade": "3"
+  },
+  {
+    "id": 3,
+    "fullName": "Ali Çelik",
+    "studentNo": "23040301059",
+    "department": "Yazılım Mühendisliği",
+    "grade": "3"
+  },
+  {
+    "id": 4,
+    "fullName": "Mehmet Oytun Özer",
+    "studentNo": "23040301043",
+    "department": "Yazılım Mühendisliği",
+    "grade": "3"
+  }
+]
