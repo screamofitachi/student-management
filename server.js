@@ -20,8 +20,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Test route
 app.get("/", (req, res) => {
-  res.send("Student Management Server is running 🚀");
+  res.redirect("/pages/login.html");
 });
+
 
 // Login route
 app.get("/login", (req, res) => {
