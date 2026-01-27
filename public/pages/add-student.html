@@ -8,16 +8,22 @@
 </head>
 
 <body class="bg-light">
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="/pages/index.html">Öğrenci Yönetim</a>
+
       <div class="ms-auto d-flex gap-2">
+        <a class="btn btn-outline-light btn-sm" href="/pages/index.html">Dashboard</a>
         <a class="btn btn-outline-light btn-sm" href="/pages/students.html">Öğrenciler</a>
+        <a class="btn btn-outline-light btn-sm" href="/pages/deleted-students.html">Silinenler</a>
+        <a class="btn btn-success btn-sm" href="/pages/add-student.html">Öğrenci Ekle</a>
         <button id="logoutBtn" class="btn btn-danger btn-sm">Çıkış</button>
       </div>
     </div>
   </nav>
 
+  <!-- CONTENT -->
   <main class="container py-4">
     <h2 class="mb-3">Öğrenci Ekle</h2>
 
@@ -60,17 +66,17 @@
           <h5>📊 Akademik Notlar</h5>
 
           <div class="col-md-4">
-            <label class="form-label">Vize (%)</label>
+            <label class="form-label">Vize (%30)</label>
             <input id="midterm" type="number" min="0" max="100" class="form-control" value="0" />
           </div>
 
           <div class="col-md-4">
-            <label class="form-label">Final (%)</label>
+            <label class="form-label">Final (%50)</label>
             <input id="final" type="number" min="0" max="100" class="form-control" value="0" />
           </div>
 
           <div class="col-md-4">
-            <label class="form-label">Proje (%)</label>
+            <label class="form-label">Proje (%20)</label>
             <input id="project" type="number" min="0" max="100" class="form-control" value="0" />
           </div>
 
