@@ -26,6 +26,8 @@
     <div class="card shadow-sm">
       <div class="card-body">
         <form id="addForm" class="row g-3">
+
+          <!-- KİMLİK -->
           <div class="col-md-6">
             <label class="form-label">Ad Soyad</label>
             <input id="fullName" class="form-control" placeholder="Ahmet Yılmaz" required />
@@ -52,10 +54,42 @@
             </select>
           </div>
 
+          <hr class="my-3" />
+
+          <!-- NOTLAR -->
+          <h5>📊 Akademik Notlar</h5>
+
+          <div class="col-md-4">
+            <label class="form-label">Vize (%)</label>
+            <input id="midterm" type="number" min="0" max="100" class="form-control" value="0" />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Final (%)</label>
+            <input id="final" type="number" min="0" max="100" class="form-control" value="0" />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Proje (%)</label>
+            <input id="project" type="number" min="0" max="100" class="form-control" value="0" />
+          </div>
+
+          <!-- CANLI HESAP -->
+          <div class="col-12">
+            <div class="alert alert-info mt-3">
+              <b>Genel Ortalama:</b> <span id="overall">-</span> |
+              <b>Harf:</b> <span id="letter">-</span> |
+              <b>GPA:</b> <span id="gpa">-</span> |
+              <b>Durum:</b> <span id="status">-</span>
+            </div>
+          </div>
+
+          <!-- BUTONLAR -->
           <div class="col-12 d-flex gap-2">
             <button class="btn btn-success" type="submit">Kaydet</button>
             <a class="btn btn-outline-secondary" href="/pages/students.html">İptal</a>
           </div>
+
         </form>
       </div>
     </div>

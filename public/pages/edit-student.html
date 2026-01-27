@@ -8,6 +8,7 @@
 </head>
 
 <body class="bg-light">
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="/pages/index.html">Öğrenci Yönetim</a>
@@ -18,6 +19,7 @@
     </div>
   </nav>
 
+  <!-- CONTENT -->
   <main class="container py-4">
     <h2 class="mb-3">Öğrenci Güncelle</h2>
 
@@ -26,6 +28,8 @@
     <div class="card shadow-sm">
       <div class="card-body">
         <form id="editForm" class="row g-3">
+
+          <!-- KİMLİK -->
           <div class="col-md-6">
             <label class="form-label">Ad Soyad</label>
             <input id="fullName" class="form-control" required />
@@ -51,10 +55,42 @@
             </select>
           </div>
 
+          <hr class="my-3" />
+
+          <!-- NOTLAR -->
+          <h5>📊 Akademik Notlar</h5>
+
+          <div class="col-md-4">
+            <label class="form-label">Vize (%)</label>
+            <input id="midterm" type="number" min="0" max="100" class="form-control" />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Final (%)</label>
+            <input id="final" type="number" min="0" max="100" class="form-control" />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Proje (%)</label>
+            <input id="project" type="number" min="0" max="100" class="form-control" />
+          </div>
+
+          <!-- CANLI HESAP -->
+          <div class="col-12">
+            <div class="alert alert-info mt-3">
+              <b>Genel Ortalama:</b> <span id="overall">-</span> |
+              <b>Harf:</b> <span id="letter">-</span> |
+              <b>GPA:</b> <span id="gpa">-</span> |
+              <b>Durum:</b> <span id="status">-</span>
+            </div>
+          </div>
+
+          <!-- BUTONLAR -->
           <div class="col-12 d-flex gap-2">
             <button class="btn btn-primary" type="submit">Güncelle</button>
             <a class="btn btn-outline-secondary" href="/pages/students.html">İptal</a>
           </div>
+
         </form>
       </div>
     </div>
