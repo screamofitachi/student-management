@@ -27,6 +27,75 @@
 
     <div id="alertArea"></div>
 
+    <!-- 🔎 FİLTRE / ARAMA PANELİ -->
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <div class="row g-2 align-items-end">
+          <div class="col-md-4">
+            <label class="form-label">Arama (Ad / Numara)</label>
+            <input id="q" class="form-control" placeholder="Örn: Furkan veya 2304..." />
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label">Bölüm</label>
+            <select id="department" class="form-select">
+              <option value="">Tümü</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <label class="form-label">Sınıf</label>
+            <select id="grade" class="form-select">
+              <option value="">Tümü</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label">Sıralama</label>
+            <div class="d-flex gap-2">
+              <select id="sortBy" class="form-select">
+                <option value="createdAt">Tarihe göre</option>
+                <option value="gpa">GPA'ya göre</option>
+                <option value="fullName">Ada göre</option>
+              </select>
+              <select id="order" class="form-select" style="max-width:120px;">
+                <option value="desc">Azalan</option>
+                <option value="asc">Artan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-3 mt-2">
+            <label class="form-label">Durum</label>
+            <select id="status" class="form-select">
+              <option value="">Tümü</option>
+              <option value="Riskli">Riskli</option>
+              <option value="Orta">Orta</option>
+              <option value="Basarili">Başarılı</option>
+            </select>
+          </div>
+
+          <div class="col-md-3 mt-2">
+            <div class="form-check mt-4">
+              <input class="form-check-input" type="checkbox" id="onlyRisky">
+              <label class="form-check-label" for="onlyRisky">
+                Sadece risklileri göster
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-2 d-flex gap-2 justify-content-end">
+            <button id="btnApply" class="btn btn-primary">Uygula</button>
+            <button id="btnReset" class="btn btn-outline-secondary">Sıfırla</button>
+            <a class="btn btn-outline-success" href="/api/export/students.csv" target="_blank">
+              CSV İndir
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📋 TABLO -->
     <div class="card shadow-sm">
       <div class="card-body">
         <div class="table-responsive">
@@ -38,12 +107,14 @@
                 <th>Numara</th>
                 <th>Bölüm</th>
                 <th>Sınıf</th>
-                <th style="width:160px;">İşlemler</th>
+                <th>GPA</th>
+                <th>Durum</th>
+                <th style="width:180px;">İşlemler</th>
               </tr>
             </thead>
             <tbody id="tbody">
               <tr>
-                <td colspan="6" class="text-center text-muted">Yükleniyor...</td>
+                <td colspan="8" class="text-center text-muted">Yükleniyor...</td>
               </tr>
             </tbody>
           </table>
