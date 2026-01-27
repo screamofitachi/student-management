@@ -5,7 +5,7 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-console.log("SERVER.JS VERSION: ENHANCED (GPA + SOFT DELETE + STATS + EXPORT) ✅");
+console.log("SERVER.JS VERSION: ENHANCED (GPA + SOFT DELETE + STATS + EXPORT + TRASH) ✅");
 
 const DATA_PATH = path.join(__dirname, "data", "students.json");
 
@@ -301,6 +301,25 @@ app.post("/api/students/:id/restore", (req, res) => {
     res.json({ message: "Restored ✅", student: students[index] });
   } catch (err) {
     res.status(500).json({ message: "Restore hatası", error: String(err) });
+  }
+});
+
+// ✅ PERMANENT DELETE (hard delete)  🗑️
+app.delete("/api/students/:id/permanent", (req, res) => {
+  try {
+    const id = Number(req.params.id);
+
+    const students = readStudents();
+    const index = students.findIndex((s) => Number(s.id) === id);
+
+    if (index === -1) return res.status(404).json({ message: "Öğrenci bulunamadı." });
+
+    const removed = students.splice(index, 1)[0];
+    writeStudents(students);
+
+    res.json({ message: "Kalıcı olarak silindi ✅", removed });
+  } catch (err) {
+    res.status(500).json({ message: "Kalıcı silme hatası", error: String(err) });
   }
 });
 
