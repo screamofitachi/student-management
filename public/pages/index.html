@@ -22,7 +22,8 @@
   <main class="container py-4">
     <h2 class="mb-3">Dashboard</h2>
 
-    <div class="row g-3">
+    <!-- 🔢 İSTATİSTİK KARTLARI -->
+    <div class="row g-3 mb-4">
       <div class="col-md-4">
         <div class="card shadow-sm">
           <div class="card-body">
@@ -32,21 +33,56 @@
         </div>
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-4">
         <div class="card shadow-sm">
           <div class="card-body">
-            <h5 class="mb-2">Kısayollar</h5>
-            <div class="d-flex gap-2 flex-wrap">
-              <a class="btn btn-primary" href="/pages/students.html">Öğrenci Listesi</a>
-              <a class="btn btn-success" href="/pages/add-student.html">Öğrenci Ekle</a>
-            </div>
-            <p class="text-muted mt-3 mb-0">
-              Bu sayfa giriş kontrolü yapar. Giriş yoksa otomatik login’e atar.
-            </p>
+            <div class="text-muted">Ortalama GPA</div>
+            <div id="avgGpa" class="display-6">-</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="text-muted">Riskli Öğrenci</div>
+            <div id="riskyCount" class="display-6 text-danger">-</div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- 🔗 KISAYOLLAR -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="mb-2">Kısayollar</h5>
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-primary" href="/pages/students.html">Öğrenci Listesi</a>
+          <a class="btn btn-success" href="/pages/add-student.html">Öğrenci Ekle</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🧑‍🎓 SON EKLENENLER -->
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="mb-3">Son Eklenen Öğrenciler</h5>
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>Ad Soyad</th>
+              <th>Bölüm</th>
+              <th>GPA</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="recentStudents">
+            <tr><td colspan="4" class="text-muted">Yükleniyor...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
   </main>
 
   <script src="/js/dashboard.js"></script>
