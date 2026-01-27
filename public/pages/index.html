@@ -63,6 +63,27 @@
       </div>
     </div>
 
+    <!-- 📈 GRAFİKLER -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-7">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="mb-3">Bölümlere Göre Öğrenci Sayısı</h5>
+            <canvas id="deptChart" height="120"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="mb-3">Sınıflara Göre Dağılım</h5>
+            <canvas id="gradeChart" height="140"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 🧑‍🎓 SON EKLENENLER -->
     <div class="card shadow-sm">
       <div class="card-body">
@@ -85,6 +106,8 @@
 
   </main>
 
+  <!-- ✅ Chart.js (dashboard.js'den önce gelmeli) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="/js/dashboard.js"></script>
 </body>
 </html>
